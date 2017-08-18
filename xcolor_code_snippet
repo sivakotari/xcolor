@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	// let color = '#ff0000';
+	// let color = '#ff6f52';
+	// let color = '#ff9900';
+	let color = '#0099ff';
+	// let color = '#0099fa';
+	// let color = '#F2FF00';
+	// let color = '#77a1ef';
+	
+	let results = 101;
+	let slices = results*14.4;
+	let col = $.xcolor.analogous(color,results+1,slices);
+	
+	$('div[id]').each( (i,id) =>
+		$("#"+id['id']).css('background-color', col[i+1])
+	);
+</script>
