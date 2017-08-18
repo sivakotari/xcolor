@@ -646,7 +646,7 @@
 			if (c.success) {
 				var hsv = c["getHSV"]();
 				var part = 360 / slices, ret = [ c ];
-				var saturat = 100/results;
+				var saturat = hsv["s"]/results;
 				hsv["s"] = saturat;
 				for (hsv["h"] = ((hsv["h"] - (part * results >> 1)) + 720) % 360; --results; ) {
 					hsv["h"]+= part;
